@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 
 
 @RestController
-@CrossOrigin("http://localhost:3000/")
+@CrossOrigin("https://team-track-vert.vercel.app/")
 public class EmpController {
     
     //EmployeeSerivce employeeSerivce = new EmployeeSerivceImpl();
