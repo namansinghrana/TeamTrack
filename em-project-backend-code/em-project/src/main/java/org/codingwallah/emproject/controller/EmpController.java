@@ -18,13 +18,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 
-
 @RestController
-@CrossOrigin("https://team-track-vert.vercel.app/")
+@CrossOrigin("http://team-track-vert.vercel.app/")
 public class EmpController {
-    
-    //EmployeeSerivce employeeSerivce = new EmployeeSerivceImpl();
-    //Dependcy Injection
+
+    // EmployeeSerivce employeeSerivce = new EmployeeSerivceImpl();
+    // Dependcy Injection
     @Autowired
     EmployeeSerivce employeeSerivce;
 
@@ -41,14 +40,14 @@ public class EmpController {
 
     @PostMapping("employees")
     public String createEmployee(@RequestBody Employee employee) {
-        //employees.add(employee);
+        // employees.add(employee);
         return employeeSerivce.createEmployee(employee);
-        
+
     }
 
     @DeleteMapping("employees/{id}")
-    public String deleteEmployee(@PathVariable Long id){
-        if(employeeSerivce.deleteEmployee(id))
+    public String deleteEmployee(@PathVariable Long id) {
+        if (employeeSerivce.deleteEmployee(id))
             return "Delete Succesfully";
         return "Not found";
     }
@@ -57,6 +56,5 @@ public class EmpController {
     public String putMethodName(@PathVariable Long id, @RequestBody Employee employee) {
         return employeeSerivce.updateEmployee(id, employee);
     }
-    
-    
+
 }
