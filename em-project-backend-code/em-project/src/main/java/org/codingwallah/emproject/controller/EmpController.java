@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 
 @RestController
-@CrossOrigin("http://team-track-vert.vercel.app/")
+@CrossOrigin("https://team-track-vert.vercel.app")
 public class EmpController {
 
     // EmployeeSerivce employeeSerivce = new EmployeeSerivceImpl();
